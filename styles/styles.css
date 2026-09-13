@@ -314,7 +314,7 @@ img {
   border-radius: 100vw;
   box-sizing: border-box;
   padding: 5px;
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
@@ -356,7 +356,7 @@ img {
 }
 
 .section-title {
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -694,7 +694,7 @@ img {
 .footer-info-phone {
   display: block;
   width: 340px;
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
@@ -815,10 +815,10 @@ img {
   z-index: 2;
 }
 
-/*
+
 .modal-container-close {
   display: none;
-} */
+}
 
 .modal-auth {
   position: relative;
@@ -883,7 +883,7 @@ img {
 }
 
 .date-input {
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   border-radius: 4px;
   max-width: 440px;
   padding: 14px 58px 14px 20px;
@@ -1167,7 +1167,7 @@ img {
 }
 
 .filter-title {
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -1302,7 +1302,7 @@ img {
 }
 
 .control {
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -1386,7 +1386,7 @@ img {
   display: inline-block;
   padding: 12px 53px 12px 20px;
   box-sizing: border-box;
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-basic), serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
