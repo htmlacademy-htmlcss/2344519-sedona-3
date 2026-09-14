@@ -2,7 +2,7 @@
 @font-face {
   font-family: "PTSans";
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-weight: 400;
+  filte font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -15,7 +15,7 @@
   font-display: swap;
 }
 
-/* Кастомные переменные */
+/* Кfilteстомные переменные */
 
 :root {
 
@@ -201,7 +201,8 @@ img {
 }
 
 .navigation-link:hover,
-.navigation-link:focus-visible {
+.navigation-link:focus-visible,
+.navigation-link:active {
   opacity: 60%;
 }
 
@@ -270,12 +271,14 @@ img {
 
 .navigation-user-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
   max-width: 330px;
+  margin-bottom: auto;
 }
 
 .navigation-user-item {
@@ -298,7 +301,8 @@ img {
   flex-shrink: 0;
 }
 
-.navigation-user-link:hover {
+.navigation-user-link:hover,
+.navigation-user-link:active {
   opacity: 50%;
 }
 
@@ -388,7 +392,6 @@ img {
 .advantages-description {
   margin: 0 auto 88px;
   padding: 0;
-
 }
 
 .advantages-list {
@@ -404,19 +407,18 @@ img {
   background-color: var(--bg-color-first);
 }
 
-.advantages-item:nth-child(1),
-.advantages-item:nth-child(5) {
-
-  grid-column: span 3;
-}
-
-.advantages-item:nth-child(2),
-.advantages-item:nth-child(4) {
+.advantages-item:nth-child(2n):not(:last-child) {
   background-color: transparent;
 }
 
-.advantages-item:nth-child(3) {
+.advantages-item:nth-child(2n+1):not(:first-child):not(:last-child) {
   background-color: var(--bg-color-second);
+}
+
+.advantages-item:first-child,
+.advantages-item:last-child {
+  grid-column: span 3;
+  background-color: var(--bg-color-first);
 }
 
 .card {
@@ -651,6 +653,10 @@ img {
   background-color: var(--bg-color-hover-three);
 }
 
+.subscription-email:active {
+  background-color: var(--bg-color-hover-one)
+}
+
 .button-subscription {
   background-color: var(--bg-color-first);
   padding: 8px 50px;
@@ -816,6 +822,7 @@ img {
 }
 
 
+
 .modal-container-close {
   display: none;
 }
@@ -974,7 +981,6 @@ img {
 .counter-button:focus-visible::after {
   border-color: var(--color-counter-focus);
 }
-
 
 .counter-button-minus {
   border-radius: 4px 0 0 4px;
@@ -1242,7 +1248,8 @@ img {
   color: var(--color-breadcrumbs-hover);
 }
 
-.filter-breadcrumbs-link:active {
+.filter-breadcrumbs-link:active,
+.filter-breadcrumbs-link:focus-visible {
   color: var(--color-breadcrumbs-active);
 }
 
@@ -1266,7 +1273,7 @@ img {
 
 .filter-group {
   flex: 0 0 auto;
-  margin: 0 75px 0 0;
+  margin: 0 70px 0 0;
   padding: 0;
   border: none;
 }
@@ -1280,8 +1287,8 @@ img {
 .filter-group-range {
   flex: 0 0 288px;
   width: 288px;
-  margin: 0 0 0 70px;
-
+  margin: 0 0 0 auto;
+  padding: 0 0 0 10px;
 }
 
 .filter-group legend {
@@ -1405,6 +1412,12 @@ img {
   margin: 0;
 }
 
+
+.input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .range-input:hover,
 .range-input:focus-visible {
   background-color: #E5E5E5;
@@ -1470,7 +1483,7 @@ img {
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: -8px;
 }
 
 .search-result {
@@ -1550,6 +1563,8 @@ img {
   list-style-type: none;
   flex: 0 0 auto;
   display: flex;
+  flex-wrap: wrap;
+  width: 160px;
   gap: 8px;
 }
 
@@ -1708,16 +1723,21 @@ img {
 
 .button-more {
   text-decoration: none;
+  display: inline-block;
   padding: 8px;
   text-align: center;
   width: auto;
+  height: min-content;
 }
 
 .button-favorite {
   background-color: var(--bg-color-first);
+  display: inline-block;
   padding: 8px;
   width: auto;
+  height: min-content;
   transition: background-color 0.3s ease;
+
 }
 
 .button-favorite:hover {
